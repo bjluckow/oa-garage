@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { fetchListingData, type Listing } from '@/lib/client';
 import UrlInput from '@/components/UrlInput';
+import { Download } from 'lucide-react';
 
 export default function InvoiceGenerator() {
     const [listing, setListing] = useState<Listing | null>(null);
@@ -18,6 +19,11 @@ export default function InvoiceGenerator() {
         } finally {
             setIsLoading(false);
         }
+    };
+
+    const handleDownload = () => {
+        if (!listing) return;
+        window.open(`/api/invoice?id=${listing.id}`, '_blank');
     };
 
     return (
@@ -46,7 +52,13 @@ export default function InvoiceGenerator() {
                         ${listing.sellingPrice.toLocaleString()}
                     </p>
 
-                    {/* PDF button goes here */}
+                    <button
+                        onClick={handleDownload}
+                        className="mt-6 flex w-full items-center justify-center gap-2 rounded-lg bg-zinc-900 px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-80 dark:bg-zinc-100 dark:text-zinc-900"
+                    >
+                        <Download className="h-4 w-4" />
+                        Download PDF Invoice{' '}
+                    </button>
                 </div>
             )}
         </div>
