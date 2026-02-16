@@ -1,10 +1,10 @@
-import SmokeTest from '@/components/SmokeTest';
+import InvoiceGenerator from '@/components/InvoiceGenerator';
 
 export default function Home() {
     return (
-        <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-            <main className="flex min-h-screen w-full max-w-3xl items-center justify-between bg-white px-16 py-32 sm:items-start dark:bg-black">
-                <SmokeTest />
+        <div className="flex min-h-screen items-center justify-center bg-zinc-50 px-4 dark:bg-zinc-950">
+            <main className="w-full max-w-xl">
+                <InvoiceGenerator />
             </main>
         </div>
     );
