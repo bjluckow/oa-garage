@@ -36,7 +36,7 @@ export default function UrlInput({
 
     return (
         <div className="w-full max-w-xl space-y-2">
-            <div className="flex items-center gap-2 rounded-xl border border-zinc-200 bg-white px-4 py-3 shadow-sm transition-colors focus-within:border-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:focus-within:border-zinc-500">
+            <div className="flex items-center gap-2 rounded-xl border border-zinc-200 bg-white px-4 py-3 shadow-sm transition-colors focus-within:border-zinc-400">
                 <Link className="h-4 w-4 shrink-0 text-zinc-400" />
                 <input
                     type="text"
@@ -47,13 +47,13 @@ export default function UrlInput({
                     }}
                     onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
                     placeholder="Paste a Garage listing URL…"
-                    className="flex-1 bg-transparent text-sm text-zinc-900 outline-none placeholder:text-zinc-400 dark:text-zinc-100"
+                    className="flex-1 bg-transparent text-sm text-zinc-900 outline-none placeholder:text-zinc-400"
                     disabled={isLoading}
                 />
                 <button
                     onClick={handleSubmit}
                     disabled={isLoading || !url.trim()}
-                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-zinc-900 text-white transition-opacity hover:opacity-80 disabled:opacity-40 dark:bg-zinc-100 dark:text-zinc-900"
+                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-zinc-900 text-white transition-opacity hover:opacity-80 disabled:opacity-40"
                 >
                     {isLoading ? (
                         <Loader2 className="h-4 w-4 animate-spin" />
