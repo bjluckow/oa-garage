@@ -1,0 +1,124 @@
+{
+    "attributes": [
+        {
+            "inputType": "NUMBER",
+            "id": "7d794d55-f1dd-4b5d-90ab-b277e202ceed",
+            "createdAt": "2025-06-02T14:50:36.098Z",
+            "updatedAt": "2025-10-24T15:17:19.366Z",
+            "order": 6,
+            "label": "Mileage"
+        },
+        {
+            "inputType": "BOOLEAN",
+            "id": "a7234685-3bd4-48c3-bff2-b99e1a735a33",
+            "createdAt": "2025-06-02T14:52:59.121Z",
+            "updatedAt": "2025-10-24T15:17:19.398Z",
+            "order": 12,
+            "label": "Has service records"
+        },
+        {
+            "inputType": "NUMBER",
+            "id": "b26315c4-77ca-43f8-bb1f-6b0415ff7ce7",
+            "createdAt": "2025-06-02T14:59:07.094Z",
+            "updatedAt": "2025-10-24T15:17:19.449Z",
+            "order": 8,
+            "label": "Tank size (gal)"
+        },
+        {
+            "inputType": "NUMBER",
+            "id": "7f168d23-ba9b-4f9e-89e3-dcf6116ba1f7",
+            "createdAt": "2025-06-02T14:59:46.681Z",
+            "updatedAt": "2025-10-24T15:17:19.465Z",
+            "order": 7,
+            "label": "Pump size (gpm)"
+        },
+        {
+            "inputType": "BOOLEAN",
+            "id": "ce8a5149-a135-4e3a-ae4c-7c2dd313ce33",
+            "createdAt": "2025-06-04T20:06:13.040Z",
+            "updatedAt": "2025-10-24T15:17:19.480Z",
+            "order": 14,
+            "label": "Has pump test"
+        },
+        {
+            "inputType": "NUMBER",
+            "id": "97200a37-b9fc-49eb-ac7b-a0e42093a77d",
+            "createdAt": "2025-06-04T23:05:14.314Z",
+            "updatedAt": "2025-10-24T15:17:19.512Z",
+            "order": 15,
+            "label": "Engine hours"
+        },
+        {
+            "inputType": "NUMBER",
+            "id": "ec64460c-d0b9-47aa-87d6-c410d3fbe26c",
+            "createdAt": "2025-06-04T23:06:46.174Z",
+            "updatedAt": "2025-10-24T15:17:19.527Z",
+            "order": 16,
+            "label": "Pump hours"
+        },
+        {
+            "inputType": "BOOLEAN",
+            "id": "e7061acf-fca9-45a5-9a1b-865df8dc8dc0",
+            "createdAt": "2025-06-04T23:09:34.842Z",
+            "updatedAt": "2025-10-24T15:17:19.562Z",
+            "order": 13,
+            "label": "Runs without issue"
+        },
+        {
+            "inputType": "BOOLEAN",
+            "id": "c993fd59-8f8b-4800-abd8-b82664f84c61",
+            "createdAt": "2025-06-02T14:57:16.937Z",
+            "updatedAt": "2025-10-24T15:17:19.578Z",
+            "order": 11,
+            "label": "4WD"
+        },
+        {
+            "inputType": "STRING",
+            "id": "0f5716f2-0d28-4516-a693-ecd1f4436f0f",
+            "createdAt": "2025-10-24T15:17:16.816Z",
+            "updatedAt": "2025-10-24T15:17:19.832Z",
+            "order": 5,
+            "label": "Model"
+        },
+        {
+            "inputType": "STRING",
+            "id": "76720e50-0ae7-4eb7-91a7-5647f81e875c",
+            "createdAt": "2025-10-24T15:17:16.891Z",
+            "updatedAt": "2025-10-24T15:17:19.850Z",
+            "order": 4,
+            "label": "Chassis"
+        },
+        {
+            "inputType": "BOOLEAN",
+            "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567891",
+            "createdAt": "2025-10-24T15:17:17.007Z",
+            "updatedAt": "2025-10-24T15:17:19.881Z",
+            "order": 10,
+            "label": "Automatic"
+        },
+        {
+            "inputType": "STRING",
+            "id": "cf994aac-a927-4724-8e06-e2ce203e1b4c",
+            "createdAt": "2025-10-24T15:17:16.957Z",
+            "updatedAt": "2025-10-24T15:17:19.865Z",
+            "order": 2,
+            "label": "Vehicle type"
+        },
+        {
+            "inputType": "STRING",
+            "id": "adacd047-7eb8-4200-a1fc-b31c916728e6",
+            "createdAt": "2025-10-24T15:17:16.754Z",
+            "updatedAt": "2025-10-24T15:17:19.597Z",
+            "order": 3,
+            "label": "Body"
+        },
+        {
+            "inputType": "STRING",
+            "id": "1d0627eb-2e87-4d13-a20b-6008fbcfdc85",
+            "createdAt": "2026-01-13T18:28:24.236Z",
+            "updatedAt": "2026-01-13T18:28:24.236Z",
+            "order": 10,
+            "label": "VIN"
+        }
+    ]
+}
