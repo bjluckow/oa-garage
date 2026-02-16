@@ -10,7 +10,7 @@ export default function Footer() {
                         <ul className="space-y-2 text-sm">
                             <li>
                                 <a
-                                    href="https://www.withgarage.com"
+                                    href="/placeholder"
                                     className="hover:text-white"
                                 >
                                     Browse listings
@@ -18,7 +18,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <a
-                                    href="https://www.withgarage.com"
+                                    href="/placeholder"
                                     className="hover:text-white"
                                 >
                                     View categories
@@ -33,7 +33,7 @@ export default function Footer() {
                         <ul className="space-y-2 text-sm">
                             <li>
                                 <a
-                                    href="https://www.withgarage.com/sell"
+                                    href="/placeholder"
                                     className="hover:text-white"
                                 >
                                     How to sell
@@ -41,7 +41,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <a
-                                    href="https://www.withgarage.com/sell"
+                                    href="/placeholder"
                                     className="hover:text-white"
                                 >
                                     How to list
@@ -56,7 +56,7 @@ export default function Footer() {
                         <ul className="space-y-2 text-sm">
                             <li>
                                 <a
-                                    href="https://www.withgarage.com"
+                                    href="/placeholder"
                                     className="hover:text-white"
                                 >
                                     Contact us
@@ -64,7 +64,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <a
-                                    href="https://www.withgarage.com"
+                                    href="/placeholder"
                                     className="hover:text-white"
                                 >
                                     Help center
@@ -79,7 +79,7 @@ export default function Footer() {
                         <ul className="space-y-2 text-sm">
                             <li>
                                 <a
-                                    href="https://www.withgarage.com"
+                                    href="/placeholder"
                                     className="hover:text-white"
                                 >
                                     Privacy policy
@@ -87,7 +87,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <a
-                                    href="https://www.withgarage.com"
+                                    href="/placeholder"
                                     className="hover:text-white"
                                 >
                                     Terms
