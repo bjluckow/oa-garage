@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { fetchListing } from '@/lib/client/fetchListing';
 import { generateInvoicePdf } from '@/lib/generate-pdf';
 import { ZodError } from 'zod';
+import { fetchCategoryAttributes } from '@/lib/client/fetchAttributes';
 
 export async function GET(req: NextRequest) {
     const id = req.nextUrl.searchParams.get('id');
@@ -14,12 +15,14 @@ export async function GET(req: NextRequest) {
 
     try {
         const listing = await fetchListing(id);
-        const buffer = await generateInvoicePdf(listing);
+        const attributes = await fetchCategoryAttributes(listing.categoryId);
+        const buffer = await generateInvoicePdf(listing, attributes);
 
         return new NextResponse(new Uint8Array(buffer), {
             headers: {
                 'Content-Type': 'application/pdf',
                 'Content-Disposition': `inline; filename="invoice-${id.slice(0, 8)}.pdf"`,
+                'Cache-Control': 'no-cache, no-store, must-revalidate',
             },
         });
     } catch (err) {

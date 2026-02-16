@@ -6,16 +6,23 @@ import UrlInput from '@/components/UrlInput';
 import { Download } from 'lucide-react';
 import { PDFViewer } from '@react-pdf/renderer';
 import { InvoiceDocument } from './templates/InvoiceDocument';
+import { resolveAttributes, ResolvedAttribute } from '@/lib/resolve-attributes';
+import { fetchCategoryAttributes } from '@/lib/client/fetchAttributes';
 
 export default function InvoiceGenerator() {
     const [listing, setListing] = useState<Listing | null>(null);
+    const [attributes, setAttributes] = useState<ResolvedAttribute[]>([]);
     const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = async (id: string) => {
         setIsLoading(true);
         try {
-            const data = await fetchListing(id);
-            setListing(data);
+            const listingData = await fetchListing(id);
+            const attributeData = await fetchCategoryAttributes(
+                listingData.categoryId,
+            );
+            setListing(listingData);
+            setAttributes(resolveAttributes(listingData, attributeData));
         } catch (err) {
             console.error(err);
         } finally {
@@ -71,7 +78,10 @@ export default function InvoiceGenerator() {
                             }}
                             showToolbar={false}
                         >
-                            <InvoiceDocument listing={listing} />
+                            <InvoiceDocument
+                                listing={listing}
+                                attributes={attributes}
+                            />
                         </PDFViewer>
                     </div>
                 </div>

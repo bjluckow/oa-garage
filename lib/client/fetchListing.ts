@@ -13,7 +13,7 @@ const ListingAddressSchema = z.object({
 });
 
 const ListingCategorySchema = z.object({
-    id: z.string().uuid(),
+    id: z.uuid(),
     name: z.string(),
     slug: z.string(),
 });
@@ -39,6 +39,7 @@ const ListingSchema = z.object({
     ListingAttribute: z.array(ListingAttributeSchema),
     createdAt: z.string(),
     updatedAt: z.string(),
+    categoryId: z.uuid(),
 });
 
 export type Listing = z.infer<typeof ListingSchema>;

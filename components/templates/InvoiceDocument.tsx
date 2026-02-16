@@ -7,6 +7,8 @@ import {
     StyleSheet,
 } from '@react-pdf/renderer';
 import type { Listing } from '@/lib/client/fetchListing';
+import { ResolvedAttribute } from '@/lib/resolve-attributes';
+import { SpecsSection } from './SpecsSection';
 
 const styles = StyleSheet.create({
     page: {
@@ -94,7 +96,13 @@ function formatCurrency(amount: number) {
     return `$${amount.toLocaleString('en-US')}`;
 }
 
-export function InvoiceDocument({ listing }: { listing: Listing }) {
+export function InvoiceDocument({
+    listing,
+    attributes = [],
+}: {
+    listing: Listing;
+    attributes: ResolvedAttribute[];
+}) {
     const invoiceDate = new Date().toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
@@ -135,7 +143,7 @@ export function InvoiceDocument({ listing }: { listing: Listing }) {
 
                 <View style={styles.divider} />
 
-                {/* Specs */}
+                {/* Details */}
                 <View style={styles.section}>
                     <Text style={styles.sectionTitle}>Details</Text>
                     <View style={styles.row}>
@@ -161,6 +169,13 @@ export function InvoiceDocument({ listing }: { listing: Listing }) {
                         </View>
                     )}
                 </View>
+
+                {attributes && attributes.length > 0 && (
+                    <>
+                        <View style={styles.divider} />
+                        <SpecsSection attributes={attributes} />
+                    </>
+                )}
 
                 <View style={styles.divider} />
 
