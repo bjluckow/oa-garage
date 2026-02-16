@@ -98,7 +98,13 @@ export default function Footer() {
                 </div>
                 <div className="mt-10 border-t border-white/10 pt-6 text-xs text-zinc-400">
                     Created by Benjamin Luckow for shopgarage.com. Not for
-                    production use.
+                    production use.{' '}
+                    <a
+                        href="https://github.com/benjaminluckow/oa-garage"
+                        className="text-blue-500 underline"
+                    >
+                        GitHub Repository
+                    </a>
                 </div>
             </div>
         </footer>
