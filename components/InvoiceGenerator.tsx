@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { fetchListing, type Listing } from '@/lib/client';
+import { fetchListing, type Listing } from '@/lib/client/fetchListing';
 import UrlInput from '@/components/UrlInput';
 import { Download } from 'lucide-react';
 import { PDFViewer } from '@react-pdf/renderer';

@@ -6,7 +6,7 @@ import {
     Image,
     StyleSheet,
 } from '@react-pdf/renderer';
-import type { Listing } from '@/lib/client';
+import type { Listing } from '@/lib/client/fetchListing';
 
 const styles = StyleSheet.create({
     page: {

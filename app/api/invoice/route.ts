@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { fetchListing } from '@/lib/client';
+import { fetchListing } from '@/lib/client/fetchListing';
 import { generateInvoicePdf } from '@/lib/generate-pdf';
+import { ZodError } from 'zod';
 
 export async function GET(req: NextRequest) {
     const id = req.nextUrl.searchParams.get('id');
@@ -22,6 +23,17 @@ export async function GET(req: NextRequest) {
             },
         });
     } catch (err) {
+        if (err instanceof ZodError) {
+            console.error('Validation error:', err.issues);
+            return NextResponse.json(
+                {
+                    error: 'Unexpected data format from Garage API',
+                    details: err.issues,
+                },
+                { status: 502 },
+            );
+        }
+
         console.error(err);
         return NextResponse.json(
             { error: 'Failed to generate invoice' },
