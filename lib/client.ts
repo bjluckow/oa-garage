@@ -32,7 +32,7 @@ export type Listing = {
     updatedAt: string;
 };
 
-export async function fetchListingData(id: string): Promise<Listing> {
+export async function fetchListing(id: string): Promise<Listing> {
     const res = await fetch(`${API_BASE}/listings/${id}`);
     if (!res.ok) {
         throw new Error(

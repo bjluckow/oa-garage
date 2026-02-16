@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { fetchListingData } from '@/lib/client';
+import { fetchListing } from '@/lib/client';
 import { generateInvoicePdf } from '@/lib/generate-pdf';
 
 export async function GET(req: NextRequest) {
@@ -12,7 +12,7 @@ export async function GET(req: NextRequest) {
     }
 
     try {
-        const listing = await fetchListingData(id);
+        const listing = await fetchListing(id);
         const buffer = await generateInvoicePdf(listing);
 
         return new NextResponse(new Uint8Array(buffer), {

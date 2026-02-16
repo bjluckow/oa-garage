@@ -109,7 +109,7 @@ export function InvoiceDocument({ listing }: { listing: Listing }) {
                     <View>
                         <Text style={styles.title}>Invoice</Text>
                         <Text style={styles.subtitle}>
-                            Garage · withgarage.com
+                            Garage · shopgarage.com
                         </Text>
                     </View>
                     <View style={{ alignItems: 'flex-end' }}>

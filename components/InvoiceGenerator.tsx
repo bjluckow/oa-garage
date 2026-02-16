@@ -1,9 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { fetchListingData, type Listing } from '@/lib/client';
+import { fetchListing, type Listing } from '@/lib/client';
 import UrlInput from '@/components/UrlInput';
 import { Download } from 'lucide-react';
+import { PDFViewer } from '@react-pdf/renderer';
+import { InvoiceDocument } from './templates/InvoiceDocument';
 
 export default function InvoiceGenerator() {
     const [listing, setListing] = useState<Listing | null>(null);
@@ -12,7 +14,7 @@ export default function InvoiceGenerator() {
     const handleSubmit = async (id: string) => {
         setIsLoading(true);
         try {
-            const data = await fetchListingData(id);
+            const data = await fetchListing(id);
             setListing(data);
         } catch (err) {
             console.error(err);
@@ -57,8 +59,21 @@ export default function InvoiceGenerator() {
                         className="mt-6 flex w-full items-center justify-center gap-2 rounded-lg bg-zinc-900 px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-80 dark:bg-zinc-100 dark:text-zinc-900"
                     >
                         <Download className="h-4 w-4" />
-                        Download PDF Invoice{' '}
+                        Download PDF Invoice
                     </button>
+
+                    <div className="my-6 w-full max-w-xl overflow-hidden rounded-xl border border-zinc-200 shadow-sm dark:border-zinc-700">
+                        <PDFViewer
+                            style={{
+                                width: '100%',
+                                height: '600px',
+                                border: 'none',
+                            }}
+                            showToolbar={false}
+                        >
+                            <InvoiceDocument listing={listing} />
+                        </PDFViewer>
+                    </div>
                 </div>
             )}
         </div>
