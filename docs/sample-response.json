@@ -1,0 +1,57 @@
+{
+    "status": "ACTIVE",
+    "tags": [],
+    "deliveryMethod": "FREIGHT_FTL",
+    "id": "09b41d00-7019-45a2-a678-1f4e6c06b8ba",
+    "secondaryId": 238413,
+    "createdAt": "2026-02-02T22:42:46.679Z",
+    "updatedAt": "2026-02-03T17:07:19.617Z",
+    "listingTitle": "2007 Marion Spartan Rescue Pumper",
+    "sellingPrice": 100000,
+    "estimatedPriceMin": null,
+    "estimatedPriceMax": null,
+    "appraisedPrice": 105000,
+    "imageUrls": [
+        "https://tckhzquklzptybofowyk.supabase.co/storage/v1/object/public/items/36c3b8d5-7180-4b78-893f-33ac62af20bb/e2d549d4-393d-4a4a-8fb6-a03dfbef2ea7.jpg"
+    ],
+    "categories": [],
+    "itemBrand": "Spartan",
+    "listingDescription": "This 2007 Spartan Marion Rescue Engine is a well-maintained, service-ready apparatus equipped with a 1,500 GPM Hale pump and a 500-gallon water tank, providing reliable pumping performance and on-scene versatility. \n\nWith 67,053 miles, this engine is being replaced due to a scheduled fleet upgrade and is ready to be placed back into service with its next department.",
+    "itemAge": 2007,
+    "itemLength": 387,
+    "itemWidth": null,
+    "itemHeight": 110,
+    "itemWeight": 44000,
+    "isAuction": false,
+    "expirationDate": null,
+    "auctionStartingPrice": null,
+    "vin": null,
+    "categoryId": "86aa5c3b-3965-4a9a-b2f8-fbcb5d0ca70a",
+    "isPickupAvailable": true,
+    "userId": "36c3b8d5-7180-4b78-893f-33ac62af20bb",
+    "partnershipId": null,
+    "addressId": "bd788bcd-a386-4588-819c-4fe3a73f7314",
+    "ListingAttribute": [
+        {
+            "id": "3e95ee02-a64a-4228-882d-ed73a1e13254",
+            "createdAt": "2026-02-03T17:07:19.672Z",
+            "updatedAt": "2026-02-03T17:07:19.672Z",
+            "listingId": "09b41d00-7019-45a2-a678-1f4e6c06b8ba",
+            "categoryAttributeId": "76720e50-0ae7-4eb7-91a7-5647f81e875c",
+            "value": "Spartan"
+        }
+    ],
+    "address": {
+        "state": "NY"
+    },
+    "category": {
+        "id": "86aa5c3b-3965-4a9a-b2f8-fbcb5d0ca70a",
+        "createdAt": "2025-04-15T23:04:12.074Z",
+        "updatedAt": "2026-01-22T15:56:59.414Z",
+        "name": "Rescue Trucks and Squads",
+        "description": "Browse available used rescue trucks and squads across the United States. Nationwide delivery available on all listings.",
+        "imageUrl": "https://tckhzquklzptybofowyk.supabase.co/storage/v1/object/public/categories//rescue.jpg",
+        "slug": "used-rescue-trucks-and-squads",
+        "parentCategoryId": "b21ad398-fd0c-4c41-bab6-8d2a0852e953"
+    }
+}
